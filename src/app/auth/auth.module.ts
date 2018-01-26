@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // Containers/Components will split up later
 import { LoginComponent } from './login/login.component';
@@ -10,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
     imports: [
+        FormsModule,
         MaterialModule,
         FlexLayoutModule
     ],
