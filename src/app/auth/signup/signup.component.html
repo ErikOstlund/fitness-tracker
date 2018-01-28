@@ -3,6 +3,8 @@
             fxLayoutAlign="center center"
             #signUpForm="ngForm"
             (ngSubmit)="onSubmit(signUpForm)">
+
+        <!-- Email -->
         <mat-form-field>
             <input type="email"
                     matInput
@@ -16,6 +18,7 @@
             <mat-error *ngIf="!emailInput.hasError('required')">Invalid email format</mat-error>
         </mat-form-field>
 
+        <!-- Password -->
         <mat-form-field hintLabel="Must be 6 characters">
             <input type="password"
                     matInput
@@ -31,16 +34,28 @@
             <mat-error *ngIf="pwInput.hasError('required')">Password required</mat-error>
         </mat-form-field>
 
+        <!-- Birthdate -->
         <mat-form-field hintLabel="Must be 18 years old">
             <input matInput
                     placeholder="Enter Birthdate"
                     ngModel
                     name="birthdate"
+                    #bdayInput="ngModel"
                     [matDatepicker]="picker"
-                    [max]="maxDate">
+                    [max]="maxDate"
+                    required>
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="bdayInput.hasError('required')">Birthdate required</mat-error>
         </mat-form-field>
+
+        <!-- Checkbox -->
+        <mat-checkbox
+                ngModel
+                name="agree"
+                required>
+            Agree to insane conditions
+        </mat-checkbox>
 
         <button type="submit"
                 mat-raised-button
