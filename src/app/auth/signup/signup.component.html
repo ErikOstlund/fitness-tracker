@@ -1,6 +1,7 @@
 <section class="signup-form">
     <form fxLayout="column"
             fxLayoutAlign="center center"
+            fxLayoutGap="10px"
             #signUpForm="ngForm"
             (ngSubmit)="onSubmit(signUpForm)">
 
@@ -59,7 +60,8 @@
 
         <button type="submit"
                 mat-raised-button
-                color="primary">
+                color="primary"
+                [disabled]="signUpForm.invalid">
             Submit
         </button>
     </form>
