@@ -1,3 +1,36 @@
-<p>
-  login works!
-</p>
+<section class="login-form">
+        <form fxLayout="column"
+                fxLayoutAlign="center center"
+                fxLayoutGap="10px"
+                novalidate
+                [formGroup]="user"
+                (ngSubmit)="onSubmit(user)">
+
+            <!-- Email -->
+            <mat-form-field>
+                <input matInput
+                        type="email"
+                        formControlName="email"
+                        placeholder="Email Address">
+                <mat-error *ngIf="emailRequired">Email required</mat-error>
+                <mat-error *ngIf="emailFormat && !emailRequired">Invalid email format</mat-error>
+            </mat-form-field>
+    
+            <!-- Password -->
+            <mat-form-field>
+                <input matInput
+                        type="password"
+                        formControlName="password"
+                        placeholder="Password">
+                <mat-error *ngIf="passwordRequired">Password required</mat-error>
+            </mat-form-field>
+
+            <!-- Submit button -->
+            <button mat-raised-button
+                    color="primary"
+                    type="submit"
+                    [disabled]="user.invalid">
+                Submit
+            </button>
+        </form>
+    </section>

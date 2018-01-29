@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Containers/Components will split up later
 import { LoginComponent } from './login/login.component';
@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     imports: [
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         MaterialModule,
         FlexLayoutModule
     ],
