@@ -7,13 +7,15 @@
         <mat-toolbar color="primary">
             <div>
                 <button
+                        mat-icon-button
                         (click)="sidenav.toggle()">
-                    Toggle Side Nav
+                    <mat-icon>menu</mat-icon>
                 </button>
             </div>
-            <div>LOGO</div>
             <div>
-                <a routerLink="/">Home</a>
+                <a routerLink="/">LOGO</a>
+            </div>
+            <div fxFlex fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-end">
                 <a routerLink="/signup">Signup</a>
                 <a routerLink="/login">login</a>
                 <a routerLink="/training">training</a>
