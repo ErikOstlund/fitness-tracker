@@ -14,3 +14,8 @@ a {
 a:hover, a:active {
     color: gray;
 }
+
+.side-nav-items {
+    display: inline-block;
+    padding-left: 6px;
+}
