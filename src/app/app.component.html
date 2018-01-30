@@ -5,7 +5,7 @@
 
     <mat-sidenav-content>
         <mat-toolbar color="primary">
-            <div>
+            <div fxHide.gt-xs>
                 <button
                         mat-icon-button
                         (click)="sidenav.toggle()">
@@ -15,7 +15,11 @@
             <div>
                 <a routerLink="/">LOGO</a>
             </div>
-            <div fxFlex fxLayout fxLayoutGap="20px" fxLayoutAlign="flex-end">
+            <div fxFlex
+                    fxLayout
+                    fxLayoutGap="20px"
+                    fxLayoutAlign="flex-end"
+                    fxHide.xs>
                 <a routerLink="/signup">Signup</a>
                 <a routerLink="/login">login</a>
                 <a routerLink="/training">training</a>
